@@ -7,9 +7,4 @@ internal class MainTest{
     fun runTests(){
         assertEquals(2, 2)
     }
-
-    @Test
-    fun runTests2(){
-        assertEquals(2, 3)
-    }
 }

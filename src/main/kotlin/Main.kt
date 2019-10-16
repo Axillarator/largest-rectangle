@@ -1,5 +1,10 @@
 class Main {
-    fun main() {
-        println("hello")
+
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            println("hello World")
+        }
+
     }
 }
