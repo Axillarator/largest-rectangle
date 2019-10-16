@@ -1,4 +1,4 @@
-name: CI
+name: Verify
 
 on: [push]
 
@@ -9,11 +9,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Try Gradle Build
+    - name: Gradle Build
       uses: docker://gcr.io/cloud-builders/gradle
       with:
         args: build
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
