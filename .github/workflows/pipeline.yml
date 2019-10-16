@@ -10,7 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Try Gradle Build
-      run: ./gradlew build
+      uses: docker://gcr.io/cloud-builders/gradle
+      run: build
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
