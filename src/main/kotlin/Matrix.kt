@@ -2,26 +2,24 @@ import java.util.*
 
 class Matrix(private val height: Int, private val length: Int) {
 
-    val values = setValues()
+    private val values = setValues()
 
-    private fun setValues(): BooleanArray{
-
-        val booleans = BooleanArray(height * length)
-
+    private fun setValues(): Array<Point>{
+        val booleans = Array<Point>(height * length) {Point(true)}
         for (i in booleans.indices) {
-            booleans[i] = Random().nextBoolean()
+            booleans[i] = Point(Random().nextBoolean())
         }
         return booleans
     }
 
     override fun toString(): String {
-        var result = ""
+        var resultString = ""
         for (i in values.indices){
             if(i % this.length == 0) {
-                result += "\n"
+                resultString += "\n"
             }
-            result += values[i].toString() + "\t"
+            resultString += values[i].toString() + "\t"
         }
-        return result
+        return resultString
     }
 }
