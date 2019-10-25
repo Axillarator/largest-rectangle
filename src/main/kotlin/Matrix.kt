@@ -5,9 +5,9 @@ class Matrix(private val height: Int, private val length: Int) {
     private val values = setValues()
 
     private fun setValues(): Array<Point>{
-        val booleans = Array<Point>(height * length) {Point(true)}
+        val booleans = Array<Point>(height * length) {Point(true, 1)}
         for (i in booleans.indices) {
-            booleans[i] = Point(Random().nextBoolean())
+            booleans[i] = Point(Random().nextBoolean(), i)
         }
         return booleans
     }
