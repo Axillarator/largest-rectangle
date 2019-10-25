@@ -1,12 +1,12 @@
-class Point(private val value: Boolean, private val location: Int){
+class Point(private val value: Boolean, private val indexLocation: Int){
 
     var potentialRectangleSize: Int = 1
     var x: Int = 0
     var y: Int = 0
 
     fun setCoordinates(height: Int, length: Int) {
-        x = location % length
-        y = location / length
+        x = indexLocation % length
+        y = indexLocation / length
     }
 
     fun calculatePotentialRectangleSize(height: Int, length: Int) {
